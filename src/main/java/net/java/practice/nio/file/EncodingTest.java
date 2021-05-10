@@ -129,7 +129,7 @@ public class EncodingTest {
         System.out.println("长度：" + "abc".getBytes("UTF-16BE").length);
         System.out.println("abc 按 UTF-16 进行编码: ");
         System.out.println("byte[](有BOM 0xFEFF): " + Arrays.toString("abc".getBytes("UTF-16")));
-        System.out.println("===========" + ((int)("abc".getBytes("UTF-16")[0])));
+        System.out.printf("=========== %02x\n", ("abc".getBytes("UTF-16")[0]));
         System.out.println("长度：" + "abc".getBytes("UTF-16").length);
         // UTF-16编解码转换
         System.out.println("UTF-16编码，UTF-16解码（会按默认的big endian）：" + new String("abc".getBytes("UTF-16"), "UTF-16"));
